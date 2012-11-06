@@ -5,16 +5,39 @@ public class Bubble {
 	public static void main(String[] args)
 	{
 		Random rand = new Random();
-		int arrayLength = 10;
+		int arrayLength = 15;
 		int[] intArray = new int[arrayLength];
 		for ( int i = 0; i < arrayLength; i++)
 		{
 			intArray[i] = rand.nextInt(100);
 		}
-		BubbleSort(intArray);
+		System.out.println("Prior to sort:");
 		for (int i = 0; i < intArray.length ; i++)
 		{
-			System.out.println(intArray[i]);
+			if (i == intArray.length-1)
+			{
+			System.out.print(intArray[i]);
+			}
+			else 
+			{
+				System.out.print(intArray[i] + ", ");
+			}
+			
+		}
+		System.out.println();
+		BubbleSort(intArray);
+		System.out.println("After sort:");
+		for (int i = 0; i < intArray.length ; i++)
+		{
+			if (i == intArray.length-1)
+			{
+			System.out.print(intArray[i]);
+			}
+			else 
+			{
+				System.out.print(intArray[i] + ", ");
+			}
+			
 		}
 	}
 	
