@@ -42,20 +42,29 @@ public class ListOfNumbers {
             victor.addElement(new Integer(i));
     }
     
+    /**
+     * added this method.
+     * @param fileName the file you want to read the lest of
+     */
     public void readList(String fileName) {
-        String newLine = null;
+        String newLine = null;//string to hold line of random access file
         try {
-            RandomAccessFile raf = new RandomAccessFile(fileName, "r");
-            while ((newLine = raf.readLine()) != null) {
-                Integer i = new Integer(Integer.parseInt(newLine));
-                System.out.println(i);
-                victor.addElement(i);
-            }
-        } catch(FileNotFoundException fnf) {
-            System.err.println("File: " + fileName + " not found.");
-        } catch (IOException io) {
-            System.err.println(io.toString());
-        }
+            RandomAccessFile rAccessFile = new RandomAccessFile(fileName, "rAccessFile");//assigns file to a Random Access File
+            	while ((newLine = rAccessFile.readLine()) != null) //while line of rAccessFile is not null
+            	{
+            		int i = Integer.parseInt(newLine);
+            		System.out.println(i);
+            		victor.addElement(i);
+            	}
+        	} 
+        		catch(FileNotFoundException fnf) 
+        		{
+        		System.err.println(fileName + " not found.");
+        		} 
+        		catch (IOException io) 
+        		{
+        			System.err.println(io.getMessage());
+        		}
     }
     
     public void writeList() {
@@ -80,5 +89,10 @@ public class ListOfNumbers {
                 System.out.println("PrintWriter not open");
             }
         }
+    }
+    public static void main(String[] args)
+    {
+    	File file = new File("file");
+    
     }
 }

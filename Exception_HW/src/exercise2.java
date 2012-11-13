@@ -15,6 +15,7 @@ public class exercise2 {
 	            System.out.println(line);
 	        }
 	        return;
+	      //added both catch statements to handle exceptions for this. specific exception is first so it is identified.
 	    } catch (FileNotFoundException e) {
 			System.out.println("File not found.");
 			
