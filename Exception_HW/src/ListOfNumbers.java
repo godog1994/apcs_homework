@@ -43,7 +43,7 @@ public class ListOfNumbers {
     }
     
     /**
-     * added this method.
+     * reads numbers from a file and prints them.
      * @param fileName the file you want to read the lest of
      */
     public void readList(String fileName) {
