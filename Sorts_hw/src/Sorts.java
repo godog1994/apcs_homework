@@ -70,8 +70,8 @@ public class Sorts {
 		}
 	}
 	/**
-	 * 
-	 * @param array
+	 * Takes an array of integers and sorts using an insertion sort
+	 * @param array The array to be sorted
 	 */
 	public static void insertionSort(int[] array)
 	{
@@ -89,8 +89,8 @@ public class Sorts {
 	}
 	
 	/**
-	 * 
-	 * @param numberArray
+	 * Takes an array of integers and sorts using a bubble sort
+	 * @param numberArray the array to be sorted
 	 */
 	public static void bubbleSort(int[] numberArray)
 	{
@@ -112,8 +112,8 @@ public class Sorts {
 	      } 
 	}
 	/**
-	 * 
-	 * @param intArray
+	 * Takes an array of integers and sorts them using a selection sort
+	 * @param intArray the array to be sorted
 	 */
 	public static void selectionSort(int[] intArray) 
 	{
